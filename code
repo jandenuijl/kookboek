@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS input en output</title>
+</head>
+<style>
+	text {
+		margin: auto auto;	
+	}
+	p {
+		text-align: center;
+	}
+	button {
+	    background-color: rgba(200,100,150,5);
+	    margin: auto;
+	    border-radius: 25px;
+	    padding: 10px 20px;
+	    text-align: center;
+	}
+</style>
+<body>
+	<text>
+		<p id="helloText">Klik begin om etenswaren te bereiden!</p>
+		<button id="clickButton">Begin</button>
+		<button id="eitje">de gepocheerd ei knop</button>
+	</text>
+<script> 
+var myButton = document.getElementById("clickButton");
+var myText = document.getElementById("helloText");
+myButton.addEventListener('click', doSomething, false)
+function doSomething() {
+	var invoerG = prompt("Wat wil je maken?");
+	window.alert("Je wilt dus "+invoerG+" maken?");
+	confirm("Klopt het dat je een "+invoerG+" wilt maken?");
+		var invoer1 = prompt("Noem ingredient 1")
+		var invoer2 = prompt("Noem ingredient 2")
+		var invoerT = prompt("Hoelang duurt het bereiden?")
+	window.alert("We weten nu alles. We berekenen het recept");
+	myText.textContent = "Voor het maken van "+invoerG+", heb je "+invoer1+" en "+invoer2+" nodig. Dit kost ongeveer "+invoerT+".";
+}
+</script>
+
+</body>
+</html>
